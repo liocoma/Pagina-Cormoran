@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inscripción | Cormorán Escuela Náutica</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <a href="../index.html">
+
+                <img src="../img/logo.png" alt="Logo Cormorán">
+
+            </a>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="../index.html">Inicio</a></li>
+
+                <li><a href="nosotros.html">Nosotros</a></li>
+
+                <li><a href="inscripcion.html">Inscripción</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="contenedor-formulario">
+
+        <section class="form-card">
+
+            <h1>Formulario de inscripción</h1>
+
+            <div class="numero-inscripcion">
+
+                <span>N° de inscripción</span>
+
+                <strong>Se asignará automáticamente</strong>
+
+            </div>
+
+            <p class="subtitulo">
+
+                Completá el formulario para reservar un lugar en nuestras actividades.
+
+            </p>
+
+            <form id="formInscripcion" action="#" method="post">
+
+                <!-- DATOS DEL ALUMNO -->
+
+                <fieldset>
+
+                    <legend>Datos del alumno</legend>
+
+                    <div class="grid-form">
+
+                        <div class="grupo-input">
+
+                            <label for="nombre">Nombre *</label>
+
+                            <input type="text"
+                                id="nombreAlumno"
+                                name="nombre"
+                                required>
+
+                        </div>
+
+                        <div class="grupo-input">
+
+                            <label for="apellido">Apellido *</label>
+
+                            <input type="text"
+                                id="apellidoAlumno"
+                                name="apellido"
+                                required>
+
+                        </div>
+
+                        <div class="grupo-input">
+
+                            <label for="dni">DNI *</label>
+
+                            <input type="text"
+                                id="dniAlumno"
+                                name="dni"
+                                required>
+
+                        </div>
+
+                        <div class="grupo-input">
+
+                            <label for="fechaNacimiento">
+
+                                Fecha de nacimiento *
+
+                            </label>
+
+                            <input type="date"
+                                id="fechaNacimiento"
+                                name="fechaNacimiento"
+                                required>
+
+                        </div>
+
+                        <div class="grupo-input">
+
+                            <label for="socio">
+
+                                ¿Es socio? *
+
+                            </label>
+
+                            <select
+                                id="esSocio"
+                                name="socio"
+                                required>
+
+                                <option value="">Seleccionar</option>
+
+                                <option value="SI">Sí</option>
+
+                                <option value="NO">No</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- ESTE CAMPO MÁS ADELANTE SE OCULTARÁ -->
+
+                        <div class="grupo-input" id="grupoNumeroSocio">
+
+                            <label for="numeroSocio">
+
+                                Número de socio
+
+                            </label>
+
+                            <input type="text"
+                                id="numeroSocio"
+                                name="numeroSocio">
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- RESPONSABLE -->
+
+                <fieldset>
+
+                    <legend>Responsable</legend>
+
+                    <div class="grid-form">
+
+                        <div class="grupo-input">
+
+                            <label for="nombreResponsable">
+
+                                Padre / Madre / Tutor *
+
+                            </label>
+
+                            <input type="text"
+                                id="nombreResponsable"
+                                name="nombreResponsable"
+                                required>
+
+                        </div>
+
+                        <div class="grupo-input">
+
+                            <label for="telefonoResponsable">
+
+                                Celular *
+
+                            </label>
+
+                            <input type="tel"
+                                id="telefonoResponsable"
+                                name="telefono"
+                                required>
+
+                        </div>
+
+                        <div class="grupo-input">
+
+                            <label for="emailResponsable">
+
+                                Correo electrónico *
+
+                            </label>
+
+                            <input type="email"
+                                id="emailResponsable"
+                                name="email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- ESCOLAR -->
+
+                <fieldset>
+
+                    <legend>Información escolar</legend>
+
+                    <div class="grid-form">
+
+                        <div class="grupo-input">
+
+                            <label for="anioEscolar">
+
+                                Año escolar *
+
+                            </label>
+
+                            <select
+                                id="anioEscolar"
+                                name="anioEscolar"
+                                required>
+
+                                <option value="">Seleccionar</option>
+
+                                <option>1° grado</option>
+
+                                <option>2° grado</option>
+
+                                <option>3° grado</option>
+
+                                <option>4° grado</option>
+
+                                <option>5° grado</option>
+
+                                <option>6° grado</option>
+
+                                <option>Secundaria</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- RETIRO -->
+
+                <fieldset>
+
+                    <legend>Autorización de retiro</legend>
+
+                    <div class="checkbox-group">
+
+                        <label>
+
+                            <input type="radio"
+                                name="retiro"
+                                value="solo">
+
+                            Puede retirarse solo
+
+                        </label>
+
+                        <label>
+
+                            <input type="radio"
+                                name="retiro"
+                                value="autorizado">
+
+                            Se retira con persona autorizada
+
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Personas autorizadas para retirar</legend>
+
+                    <div class="grid-form">
+
+                        <div class="grupo-input">
+
+                            <label>Autorizado 1</label>
+
+                            <input
+                                type="text"
+                                name="autorizado1">
+
+                        </div>
+
+                        <div class="grupo-input">
+
+                            <label>Autorizado 2</label>
+
+                            <input
+                                type="text"
+                                name="autorizado2">
+
+                        </div>
+
+                        <div class="grupo-input">
+
+                            <label>Autorizado 3</label>
+
+                            <input
+                                type="text"
+                                name="autorizado3">
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- ========================================================= -->
+                <!-- INSCRIPCIÓN POR SEMANAS                                   -->
+                <!-- ========================================================= -->
+
+                <fieldset>
+
+                    <legend>Semanas</legend>
+
+                    <div id="mensajeSemanas" class="mensaje-validacion" role="alert"></div>
+
+                    <div id="contenedorSemanas"></div>
+
+                </fieldset>
+
+                <!-- ========================================================= -->
+                <!-- INFO MEDICA                                   -->
+                <!-- ========================================================= -->    
+                <fieldset>
+                    <legend>Información médica</legend>
+
+                    <div class="grid-form">
+
+                        <div class="grupo-input">
+                            <label>Obra social</label>
+                            <input
+                                type="text"
+                                name="obraSocial">
+                        </div>
+
+                        <div class="grupo-input">
+                            <label>Número de afiliado</label>
+                            <input
+                                type="text"
+                                name="numeroAfiliado">
+                        </div>
+
+                    </div>
+
+                    <div class="grupo-input">
+
+                        <label>Alergias</label>
+
+                        <textarea
+                            name="alergias">
+                        </textarea>
+
+                    </div>
+
+                    <div class="grupo-input">
+
+                        <label>Medicamentos</label>
+
+                        <textarea
+                            name="medicamentos">
+                        </textarea>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- OBSERVACIONES -->
+
+                <fieldset>
+
+                    <legend>Observaciones</legend>
+
+                    <textarea
+                        id="observaciones"
+                        name="observaciones"
+                        rows="5"
+                        placeholder="Alergias, medicación, observaciones importantes..."></textarea>
+
+                </fieldset>
+
+                <!-- ACEPTACIÓN -->
+
+                <fieldset>
+
+                    <legend>Confirmación</legend>
+
+                    <label class="check">
+
+                        <input type="checkbox"
+                            required>
+
+                        Acepto las condiciones de inscripción y el compromiso de pago.
+
+                    </label>
+
+                </fieldset>
+
+                <!-- ============================================== -->
+                <!-- RESUMEN DE LA INSCRIPCIÓN -->
+                <!-- ============================================== -->
+
+                <section
+                    class="confirmacion"
+                    id="confirmacionInscripcion">
+
+                    <h2>✅ Inscripción realizada</h2>
+
+                    <div id="datosConfirmacion">
+
+                    </div>
+
+                </section>
+
+                <div class="botones-formulario">
+
+                    <button class="btn" type="submit">
+
+                        Enviar inscripción
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>© 2026 Cormorán Escuela Náutica</p>
+
+        <div class="redes">
+
+            <a href="https://wa.me/5491123867478" target="_blank">
+                <img src="../img/whatsapp.png" alt="WhatsApp">
+            </a>
+
+            <a href="https://www.instagram.com/nautica.csf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">
+                <img src="../img/instagram.png" alt="Instagram">
+            </a>
+
+        </div>
+
+    </footer>
+    <script src="../js/config.js"></script>
+
+    <script src="../js/modeloInscripcion.js"></script>
+
+    <script src="../js/dom.js"></script>
+
+    <script src="../js/formulario.js"></script>
+
+    <script src="../js/ui.js"></script>
+
+    <script src="../js/validaciones.js"></script>
+
+    <script src="../js/inscripcionService.js"></script>
+
+    <script src="../js/app.js"></script>
+
+</body>
+
+</html>

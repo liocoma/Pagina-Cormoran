@@ -1,0 +1,963 @@
+/* RESET */
+/* ==========================================================================
+   RESET GENERAL
+   ========================================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:62.5%;
+}
+
+
+/* ==========================================================================
+   VARIABLES
+   Colores y estilos reutilizables
+   ========================================================================== */
+
+:root{
+
+    --verde-principal:#1f7a63;
+    --verde-oscuro:#145c4b;
+    --verde-claro:#2e9c7f;
+
+    --blanco:#ffffff;
+    --gris:#eaf4f1;
+
+}
+
+
+/* ==========================================================================
+   ESTILOS GENERALES
+   Todo lo que afecta al sitio completo
+   ========================================================================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    font-size:1.6rem;
+
+    color:var(--blanco);
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--verde-principal),
+        var(--verde-oscuro)
+    );
+
+}
+
+
+/* ==========================================================================
+   HEADER
+   Logo + menú de navegación
+   ========================================================================== */
+
+header{
+
+    background:var(--verde-oscuro);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:1.5rem 5%;
+
+}
+
+/* Logo */
+
+.logo img{
+
+    height:60px;
+
+}
+
+/* Menú */
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+    gap:3rem;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:var(--blanco);
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================================
+   BOTONES
+   Botones reutilizables en todo el sitio
+   ========================================================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:1.2rem 2.5rem;
+
+    border:none;
+    border-radius:3rem;
+
+    background:var(--blanco);
+
+    color:var(--verde-principal);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:var(--verde-claro);
+
+    color:var(--blanco);
+
+}
+
+
+/* ==========================================================================
+   HERO PRINCIPAL
+   Banner de bienvenida de la página Inicio
+   ========================================================================== */
+
+.hero{
+
+    height:85vh;
+
+    background:
+
+    linear-gradient(
+
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+
+    ),
+
+    url("../img/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    max-width:800px;
+
+}
+
+.hero h1{
+
+    font-size:6rem;
+
+    margin-bottom:2rem;
+
+}
+
+.hero p{
+
+    font-size:2.2rem;
+
+    margin-bottom:3rem;
+
+}
+
+
+/* ==========================================================================
+   SECCIÓN PROPUESTA
+   Presentación de la escuela
+   ========================================================================== */
+
+.propuesta,
+.actividades{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:6rem auto;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================================================
+   TARJETAS
+   Cards reutilizables
+   ========================================================================== */
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:2rem;
+
+    margin-top:4rem;
+
+}
+
+.card{
+
+    width:280px;
+
+    padding:3rem;
+
+    border-radius:2rem;
+
+    background:rgba(255,255,255,.10);
+
+}
+
+
+/* ==========================================================================
+   BENEFICIOS
+   ========================================================================== */
+
+.beneficios{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:8rem auto;
+
+    text-align:center;
+
+}
+
+.beneficios-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:2rem;
+
+    margin-top:4rem;
+
+}
+
+.beneficio{
+
+    width:320px;
+
+    padding:3rem;
+
+    border-radius:2rem;
+
+    background:rgba(255,255,255,.10);
+
+}
+
+.beneficio h3{
+
+    margin-bottom:1.5rem;
+
+    font-size:2.2rem;
+
+}
+
+.beneficio p{
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================================================
+   CTA
+   Llamado a la acción
+   ========================================================================== */
+
+.cta{
+
+    width:100%;
+
+    padding:8rem 2rem;
+
+    text-align:center;
+
+    background:rgba(0,0,0,.15);
+
+}
+
+.cta h2{
+
+    margin-bottom:2rem;
+
+}
+
+.cta p{
+
+    margin-bottom:3rem;
+
+    font-size:2rem;
+
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer{
+
+    background:var(--verde-oscuro);
+
+    text-align:center;
+
+    padding:2rem;
+
+}
+
+.redes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:2rem;
+
+    margin-top:1rem;
+
+}
+
+.redes img{
+
+    width:40px;
+    height:40px;
+
+    transition:.3s;
+
+}
+
+.redes img:hover{
+
+    transform:scale(1.15);
+
+}
+
+
+/* ==========================================================================
+   PÁGINA NOSOTROS
+   ========================================================================== */
+
+.nosotros-hero{
+
+    width:100%;
+    height:50vh;
+
+    background:
+
+    linear-gradient(
+
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+
+    ),
+
+    url("../img/nosotros.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    margin-bottom:6rem;
+
+}
+
+.historia{
+
+    width:90%;
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.historia p{
+
+    margin-bottom:2rem;
+
+    line-height:1.8;
+
+}
+
+.valores{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:6rem auto;
+
+}
+
+
+/* ==========================================================================
+   FORMULARIO DE INSCRIPCIÓN
+   ========================================================================== */
+
+/* Contenedor principal */
+
+.contenedor-formulario{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:5rem auto;
+
+}
+
+/* Tarjeta */
+
+.form-card{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:2rem;
+
+    padding:4rem;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    backdrop-filter:blur(6px);
+
+}
+
+/* ===================================================== */
+/* TARJETA DE SEMANA                                     */
+/* ===================================================== */
+
+.semana-card{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:2.5rem;
+
+    margin-bottom:3rem;
+
+}
+
+.cabecera-semana{
+
+    margin-bottom:2rem;
+
+    cursor:pointer;
+
+    list-style:none;
+
+}
+
+.cabecera-semana::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.cabecera-semana h3{
+
+    font-size:2.4rem;
+
+}
+
+.cabecera-semana span{
+
+    color:#d8f2ea;
+
+}
+
+.contenido-semana{
+
+    margin-top:1rem;
+
+}
+
+.bloque-turnos,
+.bloque-asistencia{
+
+    margin-top:2rem;
+
+}
+
+.bloque-turnos h4,
+.bloque-asistencia h4{
+
+    margin-bottom:1rem;
+
+}
+
+.bloque-turnos label,
+.bloque-asistencia label,
+.dia-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    margin-bottom:1rem;
+
+}
+
+.dias-semana{
+
+    margin-top:2rem;
+
+    padding-left:2rem;
+
+}
+
+.mensaje-validacion{
+
+    display:none;
+
+    margin-top:1rem;
+
+    padding:1rem 1.2rem;
+
+    border-radius:12px;
+
+    background:rgba(255, 87, 87, 0.16);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    color:#ffe6e6;
+
+    font-size:1.4rem;
+
+    box-shadow:0 6px 20px rgba(0,0,0,0.12);
+
+}
+
+.confirmacion{
+
+    display:none;
+
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    padding:2rem;
+    justify-content:center;
+    align-items:center;
+    background:rgba(4, 24, 20, 0.72);
+
+}
+
+.confirmacion-card{
+
+    position:relative;
+    width:min(100%, 560px);
+    padding:3rem 2.5rem 2.5rem;
+    border-radius:2.4rem;
+    background:linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.10));
+    border:1px solid rgba(255,255,255,0.24);
+    box-shadow:0 20px 50px rgba(0,0,0,0.3);
+    backdrop-filter:blur(8px);
+
+}
+
+.confirmacion-card h2{
+
+    margin-bottom:1.5rem;
+
+    color:#ffffff;
+    font-size:2.6rem;
+
+}
+
+.confirmacion-card p,
+.confirmacion-card li{
+
+    margin-bottom:1rem;
+
+    color:#f4f9f7;
+
+}
+
+.confirmacion-card ul{
+
+    padding-left:2rem;
+
+}
+
+.confirmacion-card .acciones{
+
+    display:flex;
+    justify-content:flex-end;
+    margin-top:2rem;
+
+}
+
+.confirmacion-card .btn-aceptar{
+
+    border:none;
+    border-radius:999px;
+    padding:1rem 2rem;
+    background:#ffffff;
+    color:#145c4b;
+    font-weight:700;
+    cursor:pointer;
+
+}
+
+.btn-cerrar{
+
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    border:none;
+    background:transparent;
+    color:#fff;
+    font-size:2.4rem;
+    cursor:pointer;
+    line-height:1;
+
+}
+
+/* Título */
+
+.form-card h1{
+
+    margin-bottom:1rem;
+
+}
+
+.subtitulo{
+
+    text-align:center;
+
+    color:var(--gris);
+
+    font-size:1.8rem;
+
+    margin-bottom:4rem;
+
+}
+
+/*                      NÚMERO DE INSCRIPCIÓN                                 */
+
+.numero-inscripcion{
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:15px;
+
+    padding:2rem;
+
+    text-align:center;
+
+    margin:3rem 0;
+
+}
+
+.numero-inscripcion span{
+
+    display:block;
+
+    font-size:1.5rem;
+
+    opacity:.8;
+
+}
+
+.numero-inscripcion strong{
+
+    display:block;
+
+    margin-top:.5rem;
+
+    font-size:2.2rem;
+
+    color:#FFD86B;
+
+}
+
+/* Agrupación de campos */
+
+fieldset{
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:1.5rem;
+
+    padding:3rem;
+
+    margin-bottom:3rem;
+
+}
+
+legend{
+
+    padding:0 1rem;
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+}
+
+/* Grid de dos columnas */
+
+.grid-form{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:2rem;
+
+}
+
+/* Grupo de cada campo */
+
+.grupo-input{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.grupo-input label{
+
+    margin-bottom:.8rem;
+
+    font-weight:600;
+
+}
+
+/* Inputs */
+
+.grupo-input input,
+.grupo-input select,
+.grupo-input textarea{
+
+    padding:1.2rem;
+
+    border:none;
+
+    border-radius:1rem;
+
+    font-size:1.6rem;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+/* Área de texto */
+
+textarea{
+
+    width:100%;
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+/* Checkboxes y radios */
+
+.checkbox-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1rem;
+
+}
+
+.checkbox-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+/* Campo seleccionado */
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    box-shadow:0 0 0 3px rgba(255,255,255,.35);
+
+}
+
+/* ========================================================= */
+/* RESUMEN DE INSCRIPCIÓN */
+/* ========================================================= */
+
+.resumen-inscripcion{
+
+    margin-top:4rem;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:3rem;
+
+}
+
+.resumen-inscripcion h2{
+
+    text-align:center;
+
+    margin-bottom:2rem;
+
+}
+
+#resumenContenido{
+
+    line-height:2;
+
+    font-size:1.7rem;
+
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   Adaptaciones para tablets y celulares
+   ========================================================================== */
+
+@media(max-width:768px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:2rem;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .hero h1{
+
+        font-size:4.5rem;
+
+    }
+
+    .hero p{
+
+        font-size:1.8rem;
+
+    }
+
+    .grid-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .form-card{
+
+        padding:2rem;
+
+    }
+
+    fieldset{
+
+        padding:2rem;
+
+    }
+
+}
+
+/* ========================================================= */
+/*               CONFIRMACIÓN DE INSCRIPCIÓN                 */
+/* ========================================================= */
+
+.confirmacion{
+
+    display:none;
+
+    width:100%;
+    max-width:700px;
+
+    margin:5rem auto;
+
+    padding:4rem;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.confirmacion h2{
+
+    text-align:center;
+
+    margin-bottom:3rem;
+
+}
+
+.confirmacion p{
+
+    margin-bottom:1rem;
+
+    font-size:1.8rem;
+
+}
