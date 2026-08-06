@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css?v=202608062">
 
 </head>
 
@@ -69,13 +69,18 @@
 
             </p>
 
-            <form id="formInscripcion" action="#" method="post">
+            <form id="formInscripcion" action="#" method="post" novalidate>
 
                 <!-- DATOS DEL ALUMNO -->
 
                 <fieldset>
 
                     <legend>Datos del alumno</legend>
+
+                    <div
+                        id="mensajeFormulario"
+                        class="mensaje-formulario oculto">
+                    </div>
 
                     <div class="grid-form">
 
@@ -426,7 +431,7 @@
 
                     <label class="check">
 
-                        <input type="checkbox"
+                        <input id="aceptaCondiciones" name="aceptaCondiciones" type="checkbox"
                             required>
 
                         Acepto las condiciones de inscripción y el compromiso de pago.
@@ -487,21 +492,21 @@
         </div>
 
     </footer>
-    <script src="../js/config.js"></script>
+    <script src="../js/config.js?v=202608062"></script>
 
-    <script src="../js/modeloInscripcion.js"></script>
+    <script src="../js/modeloInscripcion.js?v=202608062"></script>
 
-    <script src="../js/dom.js"></script>
+    <script src="../js/dom.js?v=202608062"></script>
 
-    <script src="../js/formulario.js"></script>
+    <script src="../js/formulario.js?v=202608062"></script>
 
-    <script src="../js/ui.js"></script>
+    <script src="../js/ui.js?v=202608062"></script>
 
-    <script src="../js/validaciones.js"></script>
+    <script src="../js/validaciones.js?v=202608062"></script>
 
-    <script src="../js/inscripcionService.js"></script>
+    <script src="../js/inscripcionService.js?v=202608062"></script>
 
-    <script src="../js/app.js"></script>
+    <script src="../js/app.js?v=202608062"></script>
 
 </body>
 

@@ -5,6 +5,8 @@
 
 const DOM = {
 
+    mensajeFormulario: document.getElementById("mensajeFormulario"),
+
     formulario: document.getElementById("formInscripcion"),
 
     contenedorSemanas: document.getElementById("contenedorSemanas"),
@@ -30,6 +32,8 @@ const DOM = {
     telefonoResponsable: document.getElementById("telefonoResponsable"),
 
     emailResponsable: document.getElementById("emailResponsable"),
+
+    aceptaCondiciones: document.getElementById("aceptaCondiciones"),
 
     observaciones: document.getElementById("observaciones"),
 

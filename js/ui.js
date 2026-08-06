@@ -22,6 +22,12 @@ function inicializarEventos(){
 
     }
 
+    if (typeof registrarLimpiezaAutomatica === "function") {
+
+        registrarLimpiezaAutomatica();
+
+    }
+
 }
 
 
@@ -50,5 +56,36 @@ function mostrarNumeroSocio(){
         DOM.numeroSocio.value="";
 
     }
+
+}
+
+// ======================================================
+// MENSAJES
+// ======================================================
+
+function mostrarError(mensaje){
+
+    DOM.mensajeFormulario.className =
+        "mensaje-formulario mensaje-error";
+
+    DOM.mensajeFormulario.textContent =
+        mensaje;
+
+}
+
+function mostrarExito(mensaje){
+
+    DOM.mensajeFormulario.className =
+        "mensaje-formulario mensaje-ok";
+
+    DOM.mensajeFormulario.textContent =
+        mensaje;
+
+}
+
+function ocultarMensaje(){
+
+    DOM.mensajeFormulario.className =
+        "mensaje-formulario oculto";
 
 }
